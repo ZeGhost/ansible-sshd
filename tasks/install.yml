@@ -1,0 +1,6 @@
+---
+- name: Install ssh packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ sshd_packages }}"
