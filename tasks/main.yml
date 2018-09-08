@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 - include: variables.yml
   tags:
   - sshd
@@ -18,3 +19,8 @@
 - include: end.yml
   tags:
   - sshd
+=======
+
+- include_tasks: sshd.yml
+  when: sshd_enable
+>>>>>>> origin/master
