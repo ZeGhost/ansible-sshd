@@ -1,7 +1,0 @@
----
-- name: Service enabled and running
-  service:
-    name: "{{ sshd_service }}"
-    enabled: true
-    state: started
-  when: "sshd_manage_service and ansible_virtualization_type|default(None) != 'docker'"

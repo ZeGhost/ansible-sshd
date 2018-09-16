@@ -1,19 +1,13 @@
 ---
-<<<<<<< HEAD
-=======
-
 - name: OS is supported
   assert:
     that: __sshd_os_supported == True
 
->>>>>>> origin/master
 - name: Install ssh packages
   package:
     name: "{{ item }}"
     state: present
   with_items: "{{ sshd_packages }}"
-<<<<<<< HEAD
-=======
 
 - name: Configuration
   template:
@@ -51,4 +45,4 @@
 - name: Register that this role has run
   set_fact: sshd_has_run=true
   when: sshd_has_run is not defined
->>>>>>> origin/master
+

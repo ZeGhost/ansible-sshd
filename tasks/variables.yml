@@ -1,8 +1,4 @@
 ---
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 - name: Set OS dependent variables
   include_vars: "{{ item }}"
   with_first_found:
@@ -12,11 +8,6 @@
    - "{{ ansible_os_family }}.yml"
    - default.yml
 
-<<<<<<< HEAD
-- name: OS is supported
-  assert:
-    that: sshd_os_supported == True
-=======
 - name: Override OS defaults
   block:
     - set_fact:
@@ -43,4 +34,3 @@
     - set_fact:
         sshd_sftp_server: "{{ __sshd_sftp_server }}"
       when: sshd_sftp_server is not defined
->>>>>>> origin/master

@@ -1,26 +1,7 @@
 ---
-<<<<<<< HEAD
-- include: variables.yml
-  tags:
-  - sshd
-
-- include: install.yml
-  tags:
-  - sshd
-
-- include: configure.yml
-  tags:
-  - sshd
-
-- include: service.yml
-  tags:
-  - sshd
-
-- include: end.yml
-  tags:
-  - sshd
-=======
 
 - include_tasks: sshd.yml
+  tags:
+    - sshd
   when: sshd_enable
->>>>>>> origin/master
+
